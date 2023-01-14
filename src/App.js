@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useContext, useEffect } from "react";
+import { AppContext } from "./Context/appContext";
+import { GetDataError, GetDataRequest, GetDataSuccess } from "./Context/context.types";
+import { ItemCart } from "./Components/ItemCart";
 
 function App() {
+  const [state, dispatch] = useContext(AppContext);
+
+  useEffect( () => {
+    dispatch({ type: GetDataRequest })
+     fetch(
+      "https://geektrust.s3.ap-southeast-1.amazonaws.com/coding-problems/shopping-cart/catalogue.json"
+    )
+      .then((res) => res.json())
+      .then((res) => {dispatch({type:GetDataSuccess,payload:res})})
+      .catch((er) =>{ console.log(er); dispatch({ type: GetDataError })});
+  }, [dispatch]);
+  console.log(state);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Welcome Home</h1>
+      {
+        state.data.map((e)=>{
+          return <ItemCart key={e.id}data={e}></ItemCart>
+        })
+      }
+     
     </div>
   );
 }
