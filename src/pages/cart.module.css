@@ -1,0 +1,23 @@
+.main{
+    text-align: left;
+    padding: 40px;
+    
+}
+.container{
+    max-width: 600px;
+    padding: 40px;
+}
+
+.cartitmes{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.devider{
+    margin-top: 20px;
+    border: 2px solid gray;
+}
+.total{
+    padding: 20px;
+    text-align: center;
+}

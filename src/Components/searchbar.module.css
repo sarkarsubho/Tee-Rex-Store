@@ -1,0 +1,32 @@
+.main{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 30px;
+}
+.searchInput{
+    border: none;
+    border-bottom: 2px solid gray;
+    color: rgb(105, 105, 105);
+}
+
+.searchButton{
+    background-color: lightslategray;
+    border-radius: 6px;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.filterButton{
+    background-color: lightslategray;
+    border-radius: 6px;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    display: none;
+}
+@media only screen and (max-width:420px) {
+    .filterButton{
+       display: block;
+    }
+}

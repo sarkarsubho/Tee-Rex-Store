@@ -1,0 +1,43 @@
+.nav {
+  display: flex;
+  background-color: #F2F0F0;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.nav > a {
+  text-decoration: none;
+}
+.tabs {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart {
+  position: relative;
+  background-color: #D1D3D5;
+  padding: 11px 19px 7px 7px;
+  border-radius: 4px;
+  display: flex;
+  cursor: pointer;
+}
+.itemCount {
+  position: absolute;
+  top: -3px;
+  right: 5px;
+  font-size: 17px;
+  font-weight: 700;
+}
+.product{
+   border-bottom: 3px solid gray;
+   cursor: pointer;
+}
+@media only screen and (max-width:420px) {
+    /* .tabs div:first-child {
+        display: none;
+      } */
+      .product{
+        display: none;
+      }
+}

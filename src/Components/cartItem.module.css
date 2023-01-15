@@ -1,0 +1,32 @@
+.main{
+   display: flex;
+   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+   padding: 10px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+   font-weight: 600;
+}
+.details>h4{
+    margin: 0;
+}
+.qty{
+    border: 2px solid gray;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    padding:2px 5px;
+    background-color: lightgray;
+    width: 60px;
+    text-align: center;
+}
+.deleteBtn{
+    border-radius: 5px;
+    background-color: rgb(221, 204, 204);
+    padding: 3px;
+    cursor: pointer;
+}

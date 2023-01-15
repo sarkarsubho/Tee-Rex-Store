@@ -1,10 +1,14 @@
 .cart{
     text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 18px;
+    border-radius: 8px;
 }
 .priceSection{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
 }
 .button{
     height: 35px;
@@ -14,4 +18,34 @@
     color: white;
     background-color: black;
     padding: 8px;
+    cursor: pointer;
+}
+.img{
+    position: relative;
+}
+.heading{
+    position: absolute;
+}
+.qty{
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 6px;
+    background-color: black;
+    color: white;
+    gap:10px;
+    border-radius: 6px;
+    padding:3px;
+}
+.incdecButton{
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    padding: 8px;
+    cursor: pointer;
 }
